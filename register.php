@@ -5,12 +5,12 @@ error_reporting(E_ALL);
 ini_set("display_errors", 1);
 Error_Reporting(E_ALL & ~E_NOTICE);
 
-require_once("RegistrationForm.php");
+require_once("controller/RegistrationController.php");
 
 if(!empty($_POST)){
-	$RegistrationForm = new RegistrationForm($_POST); 
-	$RegistrationForm->fieldValidator();
-	if($RegistrationForm->errorFlag == false){ ?>
+	$Registration = new Registration($_POST); 
+	$Registration->fieldValidator();
+	if($Registration->errorFlag == false){ ?>
 		<script type="text/javascript">location="http://local/autorization.php"; </script>
 	<?php }
 }
@@ -67,17 +67,17 @@ if(!empty($_POST)){
 				<div id="test_form">
 					<h3>Register form</h3>
 					<form  method="POST" enctype="multipart/form-data" action="">
-						<span>User: </span><br><span class="error"><?=$RegistrationForm->errors["user"]?></span>
-						<input type='text' name='user' value="<?=($RegistrationForm->errorFlag)?$_POST['user']:"";?>"/><br>
+						<span>User: </span><br><span class="error"><?=$Registration->errors["user"]?></span>
+						<input type='text' name='user' value="<?=($Registration->errorFlag)?$_POST['user']:"";?>"/><br>
 						
-						<span>Password: </span><br><span class="error"><?=$RegistrationForm->errors['password']?></span> 
+						<span>Password: </span><br><span class="error"><?=$Registration->errors['password']?></span> 
 						<input type='password' name="password" value=""/><br>
 						
 						<span>Confirm password: </span><br>
 						<input type='password' name="passwordPovtor" value=""/><br>
 						
-						<span>Email: </span><br><span class="error"><?=$RegistrationForm->errors["email"]?></span>
-						<input type="text" name="email" value="<?=($RegistrationForm->errorFlag)?$_POST['email']:"";?>"><br><br>
+						<span>Email: </span><br><span class="error"><?=$Registration->errors["email"]?></span>
+						<input type="text" name="email" value="<?=($Registration->errorFlag)?$_POST['email']:"";?>"><br><br>
 						
 						<input type='submit' name="submit"  value='Sign up'/>
 						<input type='reset' value="Delete"/>

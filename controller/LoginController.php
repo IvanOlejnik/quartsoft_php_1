@@ -1,6 +1,6 @@
 <?php	
 include_once $_SERVER['DOCUMENT_ROOT'].'/models/usersClass.php';
-	class LoginForm
+	class Login
 	{
 	    public $email;
 	    private $password;

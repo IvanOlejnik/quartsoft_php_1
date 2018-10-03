@@ -1,11 +1,11 @@
 <?php
 	session_start();
-	require_once("LoginForm.php");
+	require_once("controller/LoginController.php");
 	require_once 'session.class.php';
 
 	if(!empty($_POST)){
-		$LoginForm = new LoginForm($_POST); 
-		$LoginForm->fieldValidator();
+		$Login = new Login($_POST); 
+		$Login->fieldValidator();
 	}
 	if ( (Session::has('name')) ) { ?>
 		<script type="text/javascript">location="http://local/kabinet.php"; </script>
@@ -60,8 +60,8 @@
 				<div id="test_form">
 					<h3>Form autorization</h3>
 					<form  method="POST" enctype="multipart/form-data" action="">
-						<span>Name: </span><br><span class="error"><?=$LoginForm->errors["email"]?></span><input type='text' name='email' value="<?=($LoginForm->errorFlag)?$_POST['email']:"";?>"/><br>
-						<span>Password: </span><br><span class="error"><?=$LoginForm->errors["password"]?></span> <input type='password' name="password" value="<?=($LoginForm->errorFlag)?$_POST['password']:"";?>"/><br>
+						<span>Name: </span><br><span class="error"><?=$Login->errors["email"]?></span><input type='text' name='email' value="<?=($Login->errorFlag)?$_POST['email']:"";?>"/><br>
+						<span>Password: </span><br><span class="error"><?=$Login->errors["password"]?></span> <input type='password' name="password" value="<?=($Login->errorFlag)?$_POST['password']:"";?>"/><br>
 						<input type="checkbox" name="remember" value="On"/> Remember me <br/> <br/>
 						<input type='submit' name="submit"  value='Log in'/>
 						<input type='reset' value="Delete"/>

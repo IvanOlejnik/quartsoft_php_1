@@ -1,7 +1,7 @@
 <?php
 include_once $_SERVER['DOCUMENT_ROOT'].'/models/usersClass.php';
 //класс обработки формы регистрации
-class RegistrationForm{
+class Registration{
 	public $errors= array();
 	private $NEW_POST = array();
 	public $errorFlag; 
