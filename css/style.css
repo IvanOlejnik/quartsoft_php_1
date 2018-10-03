@@ -1,0 +1,155 @@
+body {
+	margin: 0px;
+	background: #fef6eb;
+	font-family: "Myriad Pro";
+	position:relative;
+}
+/*НАЧАЛО ХЕДЕРА*/
+.heder {
+	width:1180px; 
+	height:210px;
+	margin: 0 auto;
+}
+.said ul{
+	padding-left:20px;
+}
+.zagolov {
+	float:left;
+	width:990px; 
+	height:210px;
+	background-image:url("../img/jpg/hedr.jpg");
+	font-family: "Myriad Pro";
+}
+.zagolov h1 {
+	font-weight:bold;
+	font-size: 20px;
+	margin-top:65px;
+	margin-left:70px;
+	color: rgb(53, 64, 84);
+	display:block;
+}
+.zagolov h1 span:nth-child(2) {
+	font-size: 30px;
+	display:block;
+	color:#d77700;
+}
+/*КОНЕЦ ХЕДЕРА*/
+/*НАЧАЛО!!! МЕНЮ!*/
+.menu li {
+	list-style-type: none;
+	display: block ;
+}
+.menu ul {
+	margin: 0; 
+	display: block;
+	width: 1180px;
+	margin: 0 auto;
+}
+.menu a {
+	display: block;
+	text-decoration: none;
+ }
+.menu ul > li { 
+ float:left;
+} /* горизонтальное размещение пунктов */
+.menu {
+	margin-bottom:20px;
+	height: 50px;
+	background:#354054;
+}
+.menu > ul > li > a {
+	margin:10px 10px 0 10px;
+	color: white;
+	padding: 0 10px 0 10px;
+	line-height: 30px;
+	border: 1px solid #354054;
+	border-radius: 100px;
+}
+.menu .activ {
+	border: 1px solid rgb(248, 173, 80);
+	border-radius: 100px;
+}
+.menu > ul > li > a:hover {
+	border: 1px solid white;
+}
+/*КОНЕЦ МЕНЮ!*/
+/*НАЧАЛО ЦЕНРТА*/
+.said {
+	width:280px; 
+	height:340px;
+	background:#ffffff;
+	float:left;
+	margin-right:20px;
+}
+.said ul {
+	margin-top: 25px;
+}
+.said a, .said li{
+	list-style-type: none;
+	text-decoration: none;
+	color:rgb(53, 64, 84);
+	font-family: "Arial";
+	font-size: 15px;
+}
+.said ul a:hover {
+	color:#d77700; 
+	cursor:pointer;
+	text-decoration: underline;
+}
+.centr{
+	width:1180px; 
+	margin: 0 auto;
+}
+/*КОНЕЦ ЦЕНРТА С САЙДБАРОМ И СЛАЙДЕРОМ!*/
+/*НАЧ КОНТЕНТА С НОВОСТЯМИ И БАННЕРОМ*/
+.zag {
+	font-size:14px;
+}
+.content {
+	color:#354054;
+	font-size:16px;
+	padding:0;
+	float:left;
+	width:850px; 
+	background:white;
+	min-height:500px;
+	padding-left:30px;
+}
+.content ul{
+ position:relative;
+ left: -14px;
+ top: -12px;
+}
+.content ol {
+ position:relative;
+ left: -24px;
+  top: -10px;
+}
+.rovn-otstup {
+	position:relative;
+	top: -10px;
+}
+.content{
+	padding-top:20px;
+}
+.cont-niz > ul > li{
+	 list-style-image: url("../img/jpg/marker.jpg");
+}
+/*КОНЕЦ КОНТЕНТА С НОВОСТЯМИ И БАННЕРОМ*/
+.futer {
+	height:90px;
+	width:500px; 
+	margin: 0 auto;	
+}
+.futer_center {
+	background:#e6d6c1;
+	height:90px;	
+}
+.clearfix::after {
+    display: table;
+    content: "";
+    clear: both;
+}
+.futer span {
+	line-height: 90px;
+}
